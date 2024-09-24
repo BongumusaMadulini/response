@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+</head>
+
+<body>
+
+
+
+    function showSecurityModel() {
+
+    var existingModal = document.getElementById('securityModel');
+    if (!existingModal) {
+    var modal = document.createElement('div');
+    modal.id = 'securityModel';
+    modal.className = 'modal';
+    modal.style.display = 'block';
+
+    modal.innerHTML = `
+    <div class="modal-content">
+        <span class="close" onclick="hideSecurtyMedical()">&times;</span>
+        <section class="seccessfullmessage-section">
+
+        </section>
+    </div>
+    `;
+</body>
+
+</html>

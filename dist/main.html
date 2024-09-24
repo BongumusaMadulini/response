@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <section id="navbar"> </section>
+
+
+    <section class="main-section">
+        <div class="loader-overlay" id="loader-overlay" style="display:none;">
+            <div id="loader" class="loader"></div>
+        </div>
+        <div class="container">
+            <h1>Welcome To Campus Emergency Response App</h1>
+            <div class="row main-screen mt-5">
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosMedical()">SOS</button>
+                    <div class="card text-center" onclick="showModalMedical()">
+                        <i class="bi bi-bag-plus icon-custom"></i>
+                        <p>Request Medical <br> Assistance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosSecurity()">SOS</button>
+                    <div class="card text-center" onclick="showSecurityModel()">
+                        <i class="bi bi-shield-lock-fill icon-custom"></i>
+                        <p>Security <br>Assistance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosFire()">SOS</button>
+                    <div class="card text-center" onclick="showFireModel()">
+                        <i class="bi bi-fire icon-custom"></i>
+                        <p>Report Fire <br> Incidents</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mobile-screen mt-5">
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosMedical()">SOS</button>
+                    <div class="card" onclick="showModalMedical()">
+
+                        <i class="bi bi-bag-plus icon-custom"></i>
+
+                        <p>Request Medical Assistance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosSecurity()">SOS</button>
+                    <div class="card text-center" onclick="showSecurityModel()">
+                        <i class="bi bi-shield-lock-fill icon-custom"></i>
+                        <p>Security Assistance</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <button type="button" class="sos" onclick="sosFire()">SOS</button>
+                    <div class="card text-center" onclick="showFireModel()">
+                        <i class="bi bi-fire icon-custom"></i>
+                        <p>Report Fire Incidents</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row tablet-row">
+                <div class="col-lg-12 text-center">
+                    <h3>Student's <br> Safety</h3>
+                    <h4>Student's Safety</h4>
+                </div>
+                <div class="d-flex">
+                    <div class="card">
+                        <p>Ensuring student safety is paramount in creating a conducive learning environment where
+                            students
+                            can thrive academically
+                            and personally. Effective safety measures include secure campus facilities, comprehensive
+                            emergency
+                            protocols, and a
+                            supportive community that fosters awareness and vigilance. By prioritizing student
+                            well-being,
+                            educational institutions
+                            can prevent accidents, mitigate risks, and promote a sense of security. This holistic
+                            approach
+                            to
+                            safety not only
+                            protects students from physical harm but also contributes to their mental and emotional
+                            well-being,
+                            ultimately enhancing
+                            their overall educational experience</p>
+                    </div>
+                    <div class="ipad-container">
+                        <img src="assets/imgs/tablet.png" alt="" class="img-tablet">
+                        <video controls class="video-container">
+                            <source src="assets/video/AME AFRICA Graduation Ceremony (1).mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <div class="sefety-container" onclick="showSefetyModel()">
+        <i class="bi bi-shield-lock-fill icon-custom"></i>
+        <button type="button">Sefety Measures</button>
+    </div>
+
+    <script src="assets/scripts/components.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script>
+        navbar();
+    </script>
+</body>
+
+</html>

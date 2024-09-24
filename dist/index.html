@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="accounts-body">
+    <div class="loader-overlay" id="loader-overlay" style="display:none;">
+        <div id="loader" class="loader"></div>
+    </div>
+    <div class="container body-container">
+        <h3 class="text-custom">Emergency Response App</h3>
+
+        <div class="img-container">
+            <img src="assets/imgs/logo.png" alt="">
+        </div>
+
+        <form class="loginForm">
+            <div class="form-group">
+                <i class="bi bi-person"></i>
+                <input type="text" class="form-control" required placeholder="Email" id="email">
+            </div>
+            <div class="form-group">
+                <i class="bi bi-lock"></i>
+                <input type="password" class="form-control" required placeholder="Password" id="password">
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="handleSignIn()">Login</button>
+            <div class="text-center mt-3">
+                <a href="resetpassword.html" class="text-custom">Forgot Password?</a>
+            </div>
+            <div class="text-center mt-2">
+                <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/scripts/main.js"></script>
+
+</body>
+
+</html>

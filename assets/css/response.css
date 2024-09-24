@@ -1,0 +1,111 @@
+@media (max-width: 768px) {
+
+    #navbar .row .toHide,
+    #navbarAdmin .row .toHide {
+        display: none;
+    }
+
+    .account {
+        margin-top: 10px;
+    }
+
+    .main-section .card {
+        margin: 10px 0;
+    }
+
+    .main-section .main-screen {
+        display: none;
+    }
+
+    .main-section .mobile-screen {
+        display: block;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .main-section .mobile-screen .col-lg-3 {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .main-section .mobile-screen .sos {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        top: -5px;
+        right: -5px;
+    }
+
+
+    .main-section .mobile-screen .card {
+        display: flex;
+        align-items: baseline;
+        padding: 10px;
+        height: min-content;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .main-section .mobile-screen .icon-custom {
+        font-size: 2rem;
+    }
+
+    .main-section .mobile-screen p {
+        margin: 0;
+        margin-left: 10px;
+        font-size: 1.5rem;
+    }
+
+    .main-section .container h1 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .sefety-container i {
+        font-size: 16px;
+    }
+
+    .sefety-container button {
+        font-size: 14px;
+    }
+
+    .sefety-container {
+        width: 180px;
+        bottom: 30px;
+    }
+
+    .main-section .tablet-row .d-flex {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-section .tablet-row .card {
+        width: 100%;
+    }
+
+    .main-section .tablet-row .card:hover {
+        transform: scale(1);
+    }
+
+    .main-section .tablet-row .ipad-container {
+        width: 80%;
+    }
+
+    .sideNavbar {
+        display: none;
+    }
+
+    .navbarMobile {
+        display: block;
+    }
+
+    #reports .card-header p {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .page {
+        overflow-y: auto;
+    }
+}

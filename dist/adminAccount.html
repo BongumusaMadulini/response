@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="navbarAdmin"> </section>
+    <div class="loader-overlay" id="loader-overlay" style="display:none;">
+        <div id="loader" class="loader"></div>
+    </div>
+
+    <div class="container account-page">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <i class="bi bi-pencil edit-icon" onclick="toggleEdit()">Edit</i>
+                    <h3 class="text-center">Account Information</h3>
+                    <form>
+                        <div class="form-group">
+                            <i class="bi bi-person"></i>
+                            <input type="text" id="fullname" placeholder="Fullname" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <i class="bi bi-envelope"></i>
+                            <input type="email" id="email" placeholder="Email" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <i class="bi bi-phone"></i>
+                            <input type="text" id="cellNumber" placeholder="Cell number" readonly required>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-block" id="updateButton"
+                            onclick="handleUpdateUser()">Update</button>
+                        <a href="index.html"><button type="button" class="btn btn-danger btn-block">Logout</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sefety-container" onclick="showSefetyModel()">
+        <i class="bi bi-shield-lock-fill icon-custom"></i>
+        <button type="button">Sefety Measures</button>
+    </div>
+
+    <script src="assets/scripts/components.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script>
+        getUserData();
+        navbarAdmin();
+        function toggleEdit() {
+            const inputs = document.querySelectorAll('.account-page .form-group input');
+            inputs.forEach(input => {
+                input.readOnly = !input.readOnly;
+            });
+            document.getElementById('updateButton').style.display = inputs[0].readOnly ? 'none' : 'block';
+        }
+    </script>
+</body>
+
+</html>

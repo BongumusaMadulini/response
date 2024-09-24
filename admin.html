@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/response.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <section id="navbarAdmin"> </section>
+    <div class="container">
+        <div class="loader-overlay" id="loader-overlay" style="display:none;">
+            <div id="loader" class="loader"></div>
+        </div>
+        <div class="row navbarMobile">
+            <ul class="d-flex">
+                <li class="active" id="sos">SOS</li>
+                <li id="medical"> Medical Department</li>
+                <li id="fire"> Fire Department</li>
+                <li id="security">Security Department</li>
+            </ul>
+        </div>
+        <h1 class="Adminheader">User Requests</h1>
+        <div class="row mt-4 adminRow">
+            <div class="col-lg-3">
+                <div class="sideNavbar">
+                    <ul>
+                        <li class="active" id="sos"> <i class="bi bi-fire icon-custom"></i>SOS</li>
+                        <li id="medical"><i class="bi bi-bag-plus icon-custom"></i> Medical Departmen</li>
+                        <li id="fire"> <i class="bi bi-fire icon-custom"></i> Fire Department</li>
+                        <li id="security"><i class="bi bi-shield-lock-fill icon-custom"></i> Security Department</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9" id="reports">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/scripts/components.js"></script>
+    <script src="assets/scripts/main.js"></script>
+    <script>
+        getAllSOSReports();
+
+        navbarAdmin();
+        document.addEventListener('click', function (event) {
+            const clickedLi = event.target.closest('li');
+
+            if (clickedLi) {
+                var allLinks = document.querySelectorAll('li');
+
+                allLinks.forEach(function (link) {
+                    link.classList.remove('active');
+                });
+
+                clickedLi.classList.add('active');
+
+                if (clickedLi.id === 'medical') {
+                    getMedicalReports();
+                } else if (clickedLi.id === 'fire') {
+                    getFireReports();
+                } else if (clickedLi.id === 'security') {
+                    getSecurityReports();
+                } else if (clickedLi.id === 'sos') {
+                    getAllSOSReports();
+                }
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
